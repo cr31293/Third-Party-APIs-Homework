@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!-- adding moment source -->
+    <script src="moment.min.js"></script>
+
+    <!-- add more bootstrap for modal -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>    
+
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Work Day Scheduler</title>
+  </head>
+
+  <body>
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p> </br>
+      <p id="currentDay" class="lead"></p>
+    </header>
+    <div class="container ">
+      <!-- Modals -->
+      
+      <div class="modal" id="m9am">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="header">
+                <h1 class="modal-header"><strong>Add your event:</strong></h1>
+              <div class="modal-body">
+                <div class="form-group"><label for="message-text" class="col-form-label"></label><input class="form-control" id="message-text9"></input>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" id="sub9">Submit</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>  
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div> 
+      </div>
+
+      <div class="modal" id="m10am">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="header">
+                <h1 class="modal-header"><strong>Add your event:</strong></h1>
+              <div class="modal-body">
+                <div class="form-group"><label for="message-text" class="col-form-label"></label><input class="form-control" id="message-text10"></input>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" id="sub10">Submit</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>  
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div> 
+      </div>
+      
+      <div class="modal" id="m11am">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="header">
+                <h1 class="modal-header"><strong>Add your event:</strong></h1>
+              <div class="modal-body">
+                <div class="form-group"><label for="message-text" class="col-form-label"></label><input class="form-control" id="message-text11"></input>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" id="sub11">Submit</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>  
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div> 
+      </div>
+
+      <div class="modal" id="m12pm">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="header">
+                <h1 class="modal-header"><strong>Add your event:</strong></h1>
+              <div class="modal-body">
+                <div class="form-group"><label for="message-text" class="col-form-label"></label><input class="form-control" id="message-text12"></input>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" id="sub12">Submit</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>  
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div> 
+      </div>
+
+      <div class="modal" id="m1pm">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="header">
+                <h1 class="modal-header"><strong>Add your event:</strong></h1>
+              <div class="modal-body">
+                <div class="form-group"><label for="message-text" class="col-form-label"></label><input class="form-control" id="message-text1"></input>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" id="sub1">Submit</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>  
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div> 
+      </div>
+
+      <div class="modal" id="m2pm">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="header">
+                <h1 class="modal-header"><strong>Add your event:</strong></h1>
+              <div class="modal-body">
+                <div class="form-group"><label for="message-text" class="col-form-label"></label><input class="form-control" id="message-text2"></input>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" id="sub2">Submit</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>  
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div> 
+      </div>
+
+      <div class="modal" id="m3pm">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="header">
+                <h1 class="modal-header"><strong>Add your event:</strong></h1>
+              <div class="modal-body">
+                <div class="form-group"><label for="message-text" class="col-form-label"></label><input class="form-control" id="message-text3"></input>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" id="sub3">Submit</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>  
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div> 
+      </div>
+
+      <div class="modal" id="m4pm">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="header">
+                <h1 class="modal-header"><strong>Add your event:</strong></h1>
+              <div class="modal-body">
+                <div class="form-group"><label for="message-text" class="col-form-label"></label><input class="form-control" id="message-text4"></input>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" id="sub4">Submit</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>  
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div> 
+      </div>
+
+      <div class="modal" id="m5pm">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="header">
+                <h1 class="modal-header"><strong>Add your event:</strong></h1>
+              <div class="modal-body">
+                <div class="form-group"><label for="message-text" class="col-form-label"></label><input class="form-control" id="message-text5"></input>
+              <div class="modal-footer">
+                  <button button type="button" class="btn btn-primary" id="sub5">Submit</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>  
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div> 
+      </div>
+
+      <!-- Timeblocks go here -->
+        <div class="row">
+          <!-- time slots -->
+
+          <div class="col-2">    
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item _9tb p-4" id="9am">9am:</li>
+              <li class="list-group-item _10tb p-4" id="10am">10am:</li>
+              <li class="list-group-item _11tb p-4" id="11am">11am:</li>
+              <li class="list-group-item _12tb p-4" id="12pm">12pm:</li>
+              <li class="list-group-item _1tb p-4" id="1pm">1pm:</li>
+              <li class="list-group-item _2tb p-4" id="2pm">2pm:</li>
+              <li class="list-group-item _3tb p-4" id="3pm">3pm:</li>
+              <li class="list-group-item _4tb p-4" id="4pm">4pm:</li>
+              <li class="list-group-item _5tb p-4" id="5pm">5pm:</li>
+            </ul>
+          </div>
+          <!-- text goes here -->
+          <div class="col-8">    
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item _9tb p-4 m-1" id="list9am"></li>
+              <li class="list-group-item _10tb p-4 m-1" id="list10am"></li>
+              <li class="list-group-item _11tb p-4 m-1" id="list11am"></li>
+              <li class="list-group-item _12tb p-4 m-1" id="list12pm"></li>
+              <li class="list-group-item _1tb p-4 m-1" id="list1pm"></li>
+              <li class="list-group-item _2tb p-4 m-1" id="list2pm"></li>
+              <li class="list-group-item _3tb p-4 m-1" id="list3pm"></li>
+              <li class="list-group-item _4tb p-4 m-1" id="list4pm"></li>
+              <li class="list-group-item _5tb p-4 m-1" id="list5pm"></li>
+            </ul>
+          </div>
+        
+          <!-- add event button -->
+          <div class="col-2">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item _9tb p-3 m-n1 mb-2" id="add"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#m9am" id="add9" >Add</button></li>
+              <li class="list-group-item _10tb p-3 m-n1 mb-2" id="add"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#m10am" id="add10">Add</button></li>
+              <li class="list-group-item _11tb p-3 m-n1 mb-2" id="add"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#m11am" id="add11">Add</button></li>
+              <li class="list-group-item _12tb p-3 m-n1 mb-2" id="add"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#m12pm" id="add12">Add</button></li>
+              <li class="list-group-item _1tb p-3 m-n1 mb-2" id="add"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#m1pm" id="add1">Add</button></li>
+              <li class="list-group-item _2tb p-3 m-n1 mb-2" id="add"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#m2pm" id="add2">Add</button></li>
+              <li class="list-group-item _3tb p-3 m-n1 mb-2" id="add"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#m3pm" id="add3">Add</button></li>
+              <li class="list-group-item _4tb p-3 m-n1 mb-2" id="add"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#m4pm" id="add4">Add</button></li>
+              <li class="list-group-item _5tb p-3 m-n1 mb-2" id="add"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#m5pm" id="add5">Add</button></li>
+            </ul>
+          </div>
+
+
+
+        </div>
+      </div>
+
+
+    <script>
+
+
+
+// tracking current time
+setInterval(function() {
+  var now = moment();
+  var nowReadable = now.format('hh:mm:ssA');
+
+  console.log(nowReadable);
+
+}, 1000);
+
+// todays date
+var date = moment()
+var dateReadable = date.format('MMMM Do, YYYY');
+$("#currentDay").append(dateReadable);
+
+// color coding logic
+// #list9am
+if ($("nowReadable").val < "9:00:00AM") {
+  $("#list9am").css({"background-color":"#d3d3d3","color":"white"})
+}
+else if ($("nowReadable").val = "9:00:00AM") {
+  $("#list9am").css({"background-color":"#ff6961","color":"white"})
+}
+else {
+  $("#list9am").css({"background-color":"#77dd77","color":"white"})
+};
+
+
+// #list10am
+if ($("nowReadable").val < "10:00:00AM") {
+  $("#list10am").css({"background-color":"#d3d3d3","color":"white"})
+}
+else if ($("nowReadable").val = "10:00:00AM") {
+  $("#list10am").css({"background-color":"#ff6961","color":"white"})
+}
+else {
+  $("#list10am").css({"background-color":"#77dd77","color":"white"})
+};
+
+
+// list11am
+if ($("nowReadable").val < "11:00:00AM") {
+  $("#list11am").css({"background-color":"#d3d3d3","color":"white"})
+}
+else if ($("nowReadable").val = "11:00:00AM") {
+  $("#list11am").css({"background-color":"#ff6961","color":"white"})
+}
+else {
+  $("#list11am").css({"background-color":"#77dd77","color":"white"})
+};
+
+// list12pm
+if ($("nowReadable").val < "12:00:00PM") {
+  $("#list12pm").css({"background-color":"#d3d3d3","color":"white"})
+}
+else if ($("nowReadable").val = "12:00:00PM") {
+  $("#list12pm").css({"background-color":"#ff6961","color":"white"})
+}
+else {
+  $("#list12pm").css({"background-color":"#77dd77","color":"white"})
+};
+
+// list1pm
+if ($("nowReadable").val < "1:00:00PM") {
+  $("#list1pm").css({"background-color":"#d3d3d3","color":"white"})
+}
+else if ($("nowReadable").val = "1:00:00PM") {
+  $("#list1pm").css({"background-color":"#ff6961","color":"white"})
+}
+else {
+  $("#list1pm").css({"background-color":"#77dd77","color":"white"})
+};
+
+// list2pm
+if ($("nowReadable").val < "2:00:00PM") {
+  $("#list2pm").css({"background-color":"#d3d3d3","color":"white"})
+}
+else if ($("nowReadable").val = "2:00:00PM") {
+  $("#list2pm").css({"background-color":"#ff6961","color":"white"})
+}
+else {
+  $("#list2pm").css({"background-color":"#77dd77","color":"white"})
+};
+
+if ($("nowReadable").val < "3:00:00PM") {
+  $("#list3pm").css({"background-color":"#d3d3d3","color":"white"})
+}
+else if ($("nowReadable").val = "3:00:00PM") {
+  $("#list3pm").css({"background-color":"#ff6961","color":"white"})
+}
+else {
+  $("#list3pm").css({"background-color":"#77dd77","color":"white"})
+};
+
+if ($("nowReadable").val < "4:00:00PM") {
+  $("#list4pm").css({"background-color":"#d3d3d3","color":"white"})
+}
+else if ($("nowReadable").val = "4:00:00PM") {
+  $("#list4pm").css({"background-color":"#ff6961","color":"white"})
+}
+else {
+  $("#list4pm").css({"background-color":"#77dd77","color":"white"})
+};
+
+if ($("nowReadable").val < "5:00:00PM") {
+  $("#list5pm").css({"background-color":"#d3d3d3","color":"white"})
+}
+else if ($("nowReadable").val = "5:00:00PM") {
+  $("#list5pm").css({"background-color":"#ff6961","color":"white"})
+}
+else {
+  $("#list5pm").css({"background-color":"#77dd77","color":"white"})
+};
+
+// modal onclick event
+$( "#sub9" ).click(function() {
+  var messagetext9 = $("#message-text9").val();
+  $("#list9am").text(messagetext9);
+});
+
+$( "#sub10" ).click(function() {
+  var messagetext10 = $("#message-text10").val();
+  $("#list10am").text(messagetext10);
+});
+
+$( "#sub11" ).click(function() {
+  var messagetext11 = $("#message-text11").val();
+  $("#list11am").text(messagetext11);
+});
+
+$( "#sub12" ).click(function() {
+  var messagetext12 = $("#message-text12").val();
+  $("#list12pm").text(messagetext12);
+});
+
+$( "#sub1" ).click(function() {
+  var messagetext1 = $("#message-text1").val();
+  $("#list1pm").text(messagetext1);
+});
+
+$( "#sub2" ).click(function() {
+  var messagetext2 = $("#message-text2").val();
+  $("#list2pm").text(messagetext2);
+});
+
+$( "#sub3" ).click(function() {
+  var messagetext3 = $("#message-text3").val();
+  $("#list3pm").text(messagetext3);
+});
+
+$( "#sub4" ).click(function() {
+  var messagetext4 = $("#message-text4").val();
+  $("#list4pm").text(messagetext4);
+});
+
+$( "#sub5" ).click(function() {
+  var messagetext5 = $("#message-text5").val();
+  $("#list5pm").text(messagetext5);
+});
+
+
+
+    </script>
+
+
+  </body>
+</html>
